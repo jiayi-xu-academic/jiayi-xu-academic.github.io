@@ -12,45 +12,52 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="brand" href="#top"><span>Jiayi</span> Xu</a>
       <div class="nav-links">
-        <a href="#about">about</a>
-        <a href="#news">news</a>
-        <a href="#publications">publications</a>
-        <a href="#awards">awards</a>
-        <a href="#service">service</a>
+        <a href="#about" data-i18n="nav.about">about</a>
+        <a href="#news" data-i18n="nav.news">news</a>
+        <a href="#publications" data-i18n="nav.publications">publications</a>
+        <a href="#awards" data-i18n="nav.awards">awards</a>
+        <a href="#service" data-i18n="nav.service">service</a>
       </div>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-        <span class="theme-toggle__track">
-          <span class="theme-toggle__thumb"></span>
-        </span>
-      </button>
+      <div class="nav-tools" aria-label="Site tools">
+        <div class="language-switcher" role="group" aria-label="Language switcher">
+          <button type="button" data-lang-button="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang-button="zh" aria-pressed="false">中</button>
+          <button type="button" data-lang-button="ja" aria-pressed="false">日</button>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle__track">
+            <span class="theme-toggle__thumb"></span>
+          </span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main id="top" class="page">
     <section id="about" class="intro">
       <div class="intro-content">
-        <h1>Jiayi Xu</h1>
-        <p class="subtitle">Project Assistant Professor, The University of Tokyo</p>
-        <p>
+        <h1 data-i18n="hero.name">Jiayi Xu</h1>
+        <p class="subtitle" data-i18n="hero.subtitle">Project Assistant Professor, The University of Tokyo</p>
+        <p data-i18n="hero.bio1">
           My name is Jiayi Xu (許 佳禕). I received my Ph.D. degree in engineering from the University of Tsukuba,
           Tsukuba, Japan, in 2023. Since 2025, I have been a Project Assistant Professor in the Research Center
           for Advanced Science and Technology (RCAST) at The University of Tokyo.
         </p>
-        <p>
+        <p data-i18n="hero.bio2">
           My research interests include haptics, virtual reality, human-computer interaction, and robotics.
           I design interactions that align with human affective perception by pushing the limits of haptic technology.
         </p>
         <div class="link-row" aria-label="Profile links">
-          <a href="mailto:xu.jiayi@star.rcast.u-tokyo.ac.jp">email</a>
-          <a href="https://jiayi-xu.mystrikingly.com/publications">publications</a>
+          <a href="mailto:xu.jiayi@star.rcast.u-tokyo.ac.jp" data-i18n="links.email">email</a>
+          <a href="https://jiayi-xu.mystrikingly.com/publications" data-i18n="links.publications">publications</a>
           <a href="https://researchmap.jp/jiayi-xu?lang=en">researchmap</a>
           <a href="https://jglobal.jst.go.jp/en/public/202101010961986566">J-GLOBAL</a>
         </div>
       </div>
       <aside class="profile-card" aria-label="Profile summary">
         <img src="assets/profile.svg" alt="Abstract profile illustration for Jiayi Xu">
-        <p>Haptics · VR · HCI · Robotics</p>
-        <address>
+        <p data-i18n="profile.fields">Haptics · VR · HCI · Robotics</p>
+        <address data-i18n-html="profile.address">
           RCAST, The University of Tokyo<br>
           4-6-1 Komaba, Meguro-ku<br>
           Tokyo 153-8904 JAPAN
@@ -59,43 +66,43 @@
     </section>
 
     <section id="news" class="section-block">
-      <h2>news</h2>
+      <h2 data-i18n="sections.news">news</h2>
       <div class="news-list">
         <article>
           <time datetime="2026">2026</time>
-          <p><strong>ChillFactor</strong> appears in IEEE Transactions on Visualization and Computer Graphics and IEEE VR.</p>
+          <p data-i18n-html="news.2026"><strong>ChillFactor</strong> appears in IEEE Transactions on Visualization and Computer Graphics and IEEE VR.</p>
         </article>
         <article>
           <time datetime="2025">2025</time>
-          <p>Started as Project Assistant Professor at RCAST, The University of Tokyo.</p>
+          <p data-i18n="news.job">Started as Project Assistant Professor at RCAST, The University of Tokyo.</p>
         </article>
         <article>
           <time datetime="2025">2025</time>
-          <p>Received the Bronze Award in the Grand Final at the 8th China Zhoushan Global Marine Economy Entrepreneurship and Innovation Competition.</p>
+          <p data-i18n="news.award">Received the Bronze Award in the Grand Final at the 8th China Zhoushan Global Marine Economy Entrepreneurship and Innovation Competition.</p>
         </article>
       </div>
     </section>
 
     <section id="research" class="section-block">
-      <h2>research interests</h2>
+      <h2 data-i18n="sections.research">research interests</h2>
       <div class="research-grid">
         <article>
-          <h3>Developing presentation technologies</h3>
-          <p>提示技術の開発</p>
+          <h3 data-i18n="research.r1.title">Developing presentation technologies</h3>
+          <p data-i18n="research.r1.desc">Development of presentation technologies</p>
         </article>
         <article>
-          <h3>Designing perceptual experiences</h3>
-          <p>知覚体験の設計</p>
+          <h3 data-i18n="research.r2.title">Designing perceptual experiences</h3>
+          <p data-i18n="research.r2.desc">Design of perceptual experiences</p>
         </article>
         <article>
-          <h3>Modulating human affective perception</h3>
-          <p>人間感性の変調</p>
+          <h3 data-i18n="research.r3.title">Modulating human affective perception</h3>
+          <p data-i18n="research.r3.desc">Modulation of human affective perception</p>
         </article>
       </div>
     </section>
 
     <section id="publications" class="section-block">
-      <h2>selected publications</h2>
+      <h2 data-i18n="sections.publications">selected publications</h2>
       <div class="publication-list">
         <article class="publication">
           <div class="pub-index">2026</div>
@@ -104,8 +111,8 @@
             <p><strong>J. Xu</strong>, C. A. Fan, Y. Guo, Y. Kuroda and M. Inami.</p>
             <p class="venue">IEEE Transactions on Visualization and Computer Graphics, 2026.</p>
             <div class="tag-row">
-              <span>journal</span>
-              <span>thermal feedback</span>
+              <span data-i18n="tags.journal">journal</span>
+              <span data-i18n="tags.thermal">thermal feedback</span>
               <span>VR</span>
             </div>
           </div>
@@ -117,8 +124,8 @@
             <p><strong>J. Xu</strong>, T. Lei, C. A. Fan and M. Inami.</p>
             <p class="venue">Proceedings of Eurohaptics Conference, 2026.</p>
             <div class="tag-row">
-              <span>conference</span>
-              <span>haptics</span>
+              <span data-i18n="tags.conference">conference</span>
+              <span data-i18n="tags.haptics">haptics</span>
             </div>
           </div>
         </article>
@@ -129,8 +136,8 @@
             <p>N. Kotani, K. Sakurada, <strong>J. Xu</strong>, M. Inami and Y. Monnai.</p>
             <p class="venue">Scientific Reports 15, 32249, 2025.</p>
             <div class="tag-row">
-              <span>journal</span>
-              <span>thermography</span>
+              <span data-i18n="tags.journal">journal</span>
+              <span data-i18n="tags.thermography">thermography</span>
             </div>
           </div>
         </article>
@@ -141,8 +148,8 @@
             <p><strong>J. Xu</strong>, S. Hasegawa, K. Kiyokawa, N. Ienaga and Y. Kuroda.</p>
             <p class="venue">IEEE Transactions on Haptics, 16(4), 770-784, 2023.</p>
             <div class="tag-row">
-              <span>journal</span>
-              <span>cold sensation</span>
+              <span data-i18n="tags.journal">journal</span>
+              <span data-i18n="tags.cold">cold sensation</span>
             </div>
           </div>
         </article>
@@ -153,56 +160,56 @@
             <p><strong>J. Xu</strong>, S. Yoshimoto, N. Ienaga and Y. Kuroda.</p>
             <p class="venue">IEEE Transactions on Haptics, 15(3), 592-602, 2022.</p>
             <div class="tag-row">
-              <span>journal</span>
-              <span>vortex effect</span>
+              <span data-i18n="tags.journal">journal</span>
+              <span data-i18n="tags.vortex">vortex effect</span>
             </div>
           </div>
         </article>
       </div>
-      <p class="more-link"><a href="https://jiayi-xu.mystrikingly.com/publications">see full publication list</a></p>
+      <p class="more-link"><a href="https://jiayi-xu.mystrikingly.com/publications" data-i18n="links.fullPublications">see full publication list</a></p>
     </section>
 
     <section id="awards" class="section-block">
-      <h2>awards</h2>
+      <h2 data-i18n="sections.awards">awards</h2>
       <div class="compact-list">
-        <article><span>2025</span><p>Bronze Award in the Grand Final, The 8th China Zhoushan Global Marine Economy Entrepreneurship and Innovation Competition.</p></article>
-        <article><span>2024</span><p>Best Paper Awards Finalists, ICAT-EGVE 2024.</p></article>
-        <article><span>2024</span><p>Honorable Mention Award, AsiaHaptics 2024.</p></article>
-        <article><span>2023</span><p>The 8th Golden Gyro Awards for Best VR/AR Technology Innovation of the Year.</p></article>
-        <article><span>2023</span><p>学術奨励賞, 第27回日本バーチャルリアリティ学会大会.</p></article>
-        <article><span>2022</span><p>Best Demonstration Award Bronze Winner, AsiaHaptics 2022 Tokyo Satellite.</p></article>
+        <article><span>2025</span><p data-i18n="awards.a1">Bronze Award in the Grand Final, The 8th China Zhoushan Global Marine Economy Entrepreneurship and Innovation Competition.</p></article>
+        <article><span>2024</span><p data-i18n="awards.a2">Best Paper Awards Finalists, ICAT-EGVE 2024.</p></article>
+        <article><span>2024</span><p data-i18n="awards.a3">Honorable Mention Award, AsiaHaptics 2024.</p></article>
+        <article><span>2023</span><p data-i18n="awards.a4">The 8th Golden Gyro Awards for Best VR/AR Technology Innovation of the Year.</p></article>
+        <article><span>2023</span><p data-i18n="awards.a5">Academic Encouragement Award, The 27th Annual Conference of the Virtual Reality Society of Japan.</p></article>
+        <article><span>2022</span><p data-i18n="awards.a6">Best Demonstration Award Bronze Winner, AsiaHaptics 2022 Tokyo Satellite.</p></article>
       </div>
     </section>
 
     <section id="service" class="section-block two-column">
       <div>
-        <h2>academic service</h2>
+        <h2 data-i18n="sections.service">academic service</h2>
         <ul class="plain-list">
-          <li>Program Committee: SIGGRAPH Asia 2025 Emerging Technologies.</li>
-          <li>Conference Reviewer: IEEE VR, IEEE WHC, etc.</li>
-          <li>Journal Reviewer: IEEE Transactions on Haptics.</li>
+          <li data-i18n="service.s1">Program Committee: SIGGRAPH Asia 2025 Emerging Technologies.</li>
+          <li data-i18n="service.s2">Conference Reviewer: IEEE VR, IEEE WHC, etc.</li>
+          <li data-i18n="service.s3">Journal Reviewer: IEEE Transactions on Haptics.</li>
         </ul>
       </div>
       <div>
-        <h2>skills & certificates</h2>
+        <h2 data-i18n="sections.skills">skills & certificates</h2>
         <ul class="plain-list">
-          <li>Chinese: Mother tongue.</li>
-          <li>English: TOEFL iBT 89/120.</li>
-          <li>Japanese: JLPT level 1.</li>
-          <li>Software Design Engineer certificate.</li>
+          <li data-i18n="skills.chinese">Chinese: Mother tongue.</li>
+          <li data-i18n="skills.english">English: TOEFL iBT 89/120.</li>
+          <li data-i18n="skills.japanese">Japanese: JLPT level 1.</li>
+          <li data-i18n="skills.software">Software Design Engineer certificate.</li>
         </ul>
       </div>
     </section>
 
     <section id="contact" class="section-block contact">
-      <h2>contact</h2>
-      <p>Research Center for Advanced Science and Technology, The University of Tokyo</p>
+      <h2 data-i18n="sections.contact">contact</h2>
+      <p data-i18n="contact.affiliation">Research Center for Advanced Science and Technology, The University of Tokyo</p>
       <p><a href="mailto:xu.jiayi@star.rcast.u-tokyo.ac.jp">xu.jiayi@star.rcast.u-tokyo.ac.jp</a> · <a href="tel:+817017930614">+81 70 1793 0614</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Jiayi Xu. Powered by a static al-folio inspired layout.</p>
+    <p data-i18n="footer">© 2026 Jiayi Xu. Powered by a static al-folio inspired layout.</p>
   </footer>
 
   <script src="script.js"></script>
