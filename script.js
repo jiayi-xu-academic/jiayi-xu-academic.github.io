@@ -2,7 +2,7 @@ const nav = document.querySelector(".site-nav");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeToggleText = document.querySelector(".theme-toggle__text");
 const revealItems = document.querySelectorAll(
-  ".profile, .content-section, .contact, .feature-item, .publication, .project-link, .timeline-list article, .info-grid article"
+  ".intro, .section-block, .news-list article, .research-grid article, .publication, .compact-list article"
 );
 
 const updateNavShadow = () => {
@@ -38,12 +38,13 @@ const getPreferredTheme = () => {
 const setTheme = (theme) => {
   document.body.dataset.theme = theme;
 
-  if (!themeToggle || !themeToggleText) return;
-
   const isDark = theme === "dark";
-  themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-  themeToggleText.textContent = isDark ? "Light" : "Dark";
+  themeToggle?.setAttribute("aria-pressed", String(isDark));
+  themeToggle?.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+
+  if (themeToggleText) {
+    themeToggleText.textContent = isDark ? "Light" : "Dark";
+  }
 };
 
 if ("IntersectionObserver" in window) {

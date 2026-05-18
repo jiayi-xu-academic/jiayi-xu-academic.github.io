@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Jiayi Xu profile mark</title>
+  <desc id="desc">Abstract circular mark with thermal waves and the initials JX.</desc>
+  <defs>
+    <linearGradient id="g" x1="62" x2="258" y1="48" y2="278" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5cc8e8"/>
+      <stop offset="0.55" stop-color="#2698ba"/>
+      <stop offset="1" stop-color="#f08a5d"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="#f8f9fa"/>
+  <circle cx="160" cy="160" r="132" fill="url(#g)" opacity="0.16"/>
+  <circle cx="160" cy="160" r="105" fill="#fff" stroke="#e5e5e5" stroke-width="2"/>
+  <path d="M74 178c26-38 52-38 78 0s52 38 78 0" fill="none" stroke="#2698ba" stroke-linecap="round" stroke-width="10"/>
+  <path d="M74 132c26 38 52 38 78 0s52-38 78 0" fill="none" stroke="#f08a5d" stroke-linecap="round" stroke-width="10"/>
+  <text x="160" y="174" fill="#111" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="2" text-anchor="middle">JX</text>
+</svg>
