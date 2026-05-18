@@ -1,72 +1,84 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="个人学术主页，展示研究方向、发表论文、项目与联系方式。">
-  <title>许佳祎 | 个人学术主页</title>
+  <meta name="description" content="Jiayi Xu's academic homepage: haptics, virtual reality, human-computer interaction, and robotics.">
+  <title>Jiayi Xu | Academic Homepage</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="site-nav" aria-label="主导航">
-    <a class="brand" href="#top">许佳祎</a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top">Jiayi Xu</a>
     <div class="nav-links">
-      <a href="#research">研究</a>
-      <a href="#publications">论文</a>
-      <a href="#projects">项目</a>
-      <a href="#contact">联系</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
     </div>
-    <button class="theme-toggle" type="button" aria-label="切换深色模式" aria-pressed="false">
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
       <span class="theme-toggle__track">
         <span class="theme-toggle__thumb"></span>
       </span>
-      <span class="theme-toggle__text">深色</span>
+      <span class="theme-toggle__text">Dark</span>
     </button>
   </nav>
 
   <main id="top">
     <section class="hero">
-      <p class="eyebrow">Computer Science · Artificial Intelligence</p>
-      <h1>让智能系统更可靠、更可解释，也更贴近真实世界。</h1>
+      <p class="eyebrow">Haptics · Virtual Reality · Human-Computer Interaction</p>
+      <h1>Jiayi Xu</h1>
+      <p class="hero-title">Project Assistant Professor, The University of Tokyo</p>
       <p class="hero-copy">
-        我是许佳祎，专注于机器学习、自然语言处理与人机协作。当前研究关注大语言模型评测、可信 AI，以及面向教育和科研场景的智能工具。
+        Designing interactions that align with human affective perception by pushing the limits of haptic technology.
       </p>
-      <div class="hero-actions" aria-label="主要链接">
-        <a class="button primary" href="mailto:your.email@example.com">联系我</a>
-        <a class="button secondary" href="#publications">查看论文</a>
+      <p class="hero-copy japanese">
+        触覚技術の限界を拡張し、人間の感性に寄り添うインタラクションをデザイン
+      </p>
+      <div class="hero-actions" aria-label="Primary links">
+        <a class="button primary" href="mailto:xu.jiayi@star.rcast.u-tokyo.ac.jp">Email</a>
+        <a class="button secondary" href="#publications">Publications</a>
       </div>
     </section>
 
-    <section class="profile" aria-label="个人简介">
+    <section id="about" class="profile" aria-label="About Jiayi Xu">
       <div>
         <p class="section-label">About</p>
-        <h2>研究与教学之间，寻找清晰的问题。</h2>
+        <h2>My name is Jiayi Xu (許 佳禕).</h2>
       </div>
-      <p>
-        目前就读于某某大学计算机学院，研究兴趣包括大模型对齐、知识增强推理、学术信息检索与 AI 辅助编程。我喜欢把复杂系统拆解成可以被验证、解释和复用的研究组件。
-      </p>
+      <div class="profile-copy">
+        <p>
+          I received my Ph.D. degree in engineering from the University of Tsukuba, Tsukuba, Japan, in 2023.
+          Since 2025, I have been a Project Assistant Professor in the Research Center for Advanced Science and
+          Technology (RCAST) at The University of Tokyo.
+        </p>
+        <p>
+          My research interests include haptics, virtual reality, human-computer interaction, and robotics.
+        </p>
+      </div>
     </section>
 
     <section id="research" class="content-section">
       <div class="section-heading">
-        <p class="section-label">Research</p>
-        <h2>研究方向</h2>
+        <p class="section-label">Research Interests</p>
+        <h2>Thermal and haptic interfaces for perception-rich interaction.</h2>
       </div>
       <div class="feature-grid">
         <article class="feature-item">
           <span>01</span>
-          <h3>可信大语言模型</h3>
-          <p>研究模型幻觉、鲁棒性、可解释评测与事实一致性，让生成式系统在高风险场景中更可控。</p>
+          <h3>Developing presentation technologies</h3>
+          <p>提示技術の開発</p>
         </article>
         <article class="feature-item">
           <span>02</span>
-          <h3>知识增强推理</h3>
-          <p>结合检索、结构化知识与工具调用，提升模型在复杂任务中的推理深度和可验证性。</p>
+          <h3>Designing perceptual experiences</h3>
+          <p>知覚体験の設計</p>
         </article>
         <article class="feature-item">
           <span>03</span>
-          <h3>AI 辅助学习</h3>
-          <p>设计面向学生和研究者的交互式 AI 工具，关注反馈质量、学习路径与长期使用体验。</p>
+          <h3>Modulating human affective perception</h3>
+          <p>人間感性の変調</p>
         </article>
       </div>
     </section>
@@ -74,57 +86,169 @@
     <section id="publications" class="content-section">
       <div class="section-heading">
         <p class="section-label">Publications</p>
-        <h2>代表论文</h2>
+        <h2>Selected work</h2>
       </div>
       <div class="publication-list">
         <article class="publication">
-          <p class="pub-meta">2026 · ACL</p>
-          <h3>Evaluating Faithfulness in Retrieval-Augmented Language Models</h3>
-          <p>提出一种面向检索增强生成的细粒度事实一致性评测框架。</p>
+          <p class="pub-meta">2026 · IEEE TVCG</p>
+          <div>
+            <h3>ChillFactor: A Highly-Responsive Non-Contact Cooling Feedback Interface for VR Headsets Based on Alcohol Mist Evaporation</h3>
+            <p>J. Xu, C. A. Fan, Y. Guo, Y. Kuroda and M. Inami.</p>
+          </div>
         </article>
         <article class="publication">
-          <p class="pub-meta">2025 · NeurIPS Workshop</p>
-          <h3>Human-Centered Feedback Loops for AI-Assisted Learning</h3>
-          <p>探索学习场景中人类反馈、模型建议与知识掌握之间的动态关系。</p>
+          <p class="pub-meta">2026 · IEEE VR</p>
+          <div>
+            <h3>ChillFactor: A Highly-Responsive Non-Contact Cooling Feedback Interface for VR Headsets Based on Alcohol Mist Evaporation</h3>
+            <p>J. Xu, C. A. Fan, Y. Guo, Y. Kuroda and M. Inami.</p>
+          </div>
         </article>
         <article class="publication">
-          <p class="pub-meta">2024 · EMNLP Findings</p>
-          <h3>Structured Knowledge Prompts for Robust Reasoning</h3>
-          <p>分析结构化知识提示对多步推理任务稳定性的影响。</p>
+          <p class="pub-meta">2026 · Eurohaptics</p>
+          <div>
+            <h3>Achieving Full-Body Heat Perception in VR through Spatially Congruent Facial Thermal Remapping</h3>
+            <p>J. Xu, T. Lei, C. A. Fan and M. Inami.</p>
+          </div>
+        </article>
+        <article class="publication">
+          <p class="pub-meta">2025 · Scientific Reports</p>
+          <div>
+            <h3>Monitoring the effect of alcohol intake via facial temperature variations using thermography synchronized with heartbeat</h3>
+            <p>N. Kotani, K. Sakurada, J. Xu, M. Inami and Y. Monnai.</p>
+          </div>
+        </article>
+        <article class="publication">
+          <p class="pub-meta">2023 · IEEE TOH</p>
+          <div>
+            <h3>Integration of Independent Heat Transfer Mechanisms for Non-Contact Cold Sensation Presentation with Low Residual Heat</h3>
+            <p>J. Xu, S. Hasegawa, K. Kiyokawa, N. Ienaga and Y. Kuroda.</p>
+          </div>
+        </article>
+        <article class="publication">
+          <p class="pub-meta">2022 · IEEE TOH</p>
+          <div>
+            <h3>Intensity-Adjustable Non-Contact Cold Sensation Presentation Based on the Vortex Effect</h3>
+            <p>J. Xu, S. Yoshimoto, N. Ienaga and Y. Kuroda.</p>
+          </div>
+        </article>
+      </div>
+      <a class="inline-link" href="https://jiayi-xu.mystrikingly.com/publications">Full publication list</a>
+    </section>
+
+    <section id="awards" class="content-section">
+      <div class="section-heading">
+        <p class="section-label">Awards</p>
+        <h2>Recognition</h2>
+      </div>
+      <div class="timeline-list">
+        <article>
+          <span>2025</span>
+          <h3>Bronze Award in the Grand Final</h3>
+          <p>The 8th China Zhoushan Global Marine Economy Entrepreneurship and Innovation Competition.</p>
+        </article>
+        <article>
+          <span>2024</span>
+          <h3>Best Paper Awards Finalists</h3>
+          <p>ICAT-EGVE 2024.</p>
+        </article>
+        <article>
+          <span>2024</span>
+          <h3>Honorable Mention Award</h3>
+          <p>AsiaHaptics 2024.</p>
+        </article>
+        <article>
+          <span>2023</span>
+          <h3>The 8th Golden Gyro Awards for Best VR/AR Technology Innovation of the Year</h3>
+          <p>Future Business Ecolink Conference, China.</p>
+        </article>
+        <article>
+          <span>2023</span>
+          <h3>学術奨励賞</h3>
+          <p>第27回日本バーチャルリアリティ学会大会.</p>
+        </article>
+        <article>
+          <span>2022</span>
+          <h3>Best Demonstration Award Bronze Winner</h3>
+          <p>AsiaHaptics 2022 Tokyo Satellite.</p>
+        </article>
+        <article>
+          <span>2021</span>
+          <h3>最優秀賞</h3>
+          <p>筑波大学EDGE-NEXT発展編 第5回.</p>
+        </article>
+        <article>
+          <span>2021</span>
+          <h3>ベストプレゼンテーション賞</h3>
+          <p>トップカンファレンス・アドバンスト・ワークショップ2021.</p>
+        </article>
+        <article>
+          <span>2020</span>
+          <h3>優秀発表賞</h3>
+          <p>ヒューマンインタフェースサイバーコロキウム.</p>
         </article>
       </div>
     </section>
 
-    <section id="projects" class="content-section">
+    <section class="content-section">
       <div class="section-heading">
-        <p class="section-label">Projects</p>
-        <h2>学术项目</h2>
+        <p class="section-label">Academic Services</p>
+        <h2>Service and qualifications</h2>
+      </div>
+      <div class="info-grid">
+        <article>
+          <h3>Services</h3>
+          <ul>
+            <li>Program Committee: SIGGRAPH Asia 2025 Emerging Technologies.</li>
+            <li>Conference Reviewer: IEEE VR, IEEE WHC, etc.</li>
+            <li>Journal Reviewer: IEEE Transactions on Haptics.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Language Skills & Certificates</h3>
+          <ul>
+            <li>Chinese: Mother tongue.</li>
+            <li>English: TOEFL iBT 89/120.</li>
+            <li>Japanese: JLPT level 1.</li>
+            <li>Software Design Engineer: Qualification Certificate of Computer and Software Technology Proficiency.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <p class="section-label">Related Sites</p>
+        <h2>Labs and groups</h2>
       </div>
       <div class="project-list">
-        <a class="project-link" href="#" aria-label="打开 Scholar Lens 项目">
-          <span>Scholar Lens</span>
-          <p>面向论文阅读的智能摘要、证据追踪与引用关系分析工具。</p>
+        <a class="project-link" href="#">
+          <span>Inami & Monnai Laboratory</span>
+          <p>身体情報学分野 稲見・門内研究室</p>
         </a>
-        <a class="project-link" href="#" aria-label="打开 Eval Studio 项目">
-          <span>Eval Studio</span>
-          <p>用于大语言模型评测实验的轻量级可视化平台。</p>
+        <a class="project-link" href="#">
+          <span>Manipulation Systems Laboratory</span>
+          <p>マニピュレーション・システム研究室</p>
+        </a>
+        <a class="project-link" href="#">
+          <span>Life Engineering Lab</span>
+          <p>University of Tsukuba.</p>
         </a>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <p class="section-label">Contact</p>
-      <h2>欢迎交流研究、合作与想法。</h2>
-      <div class="contact-links">
-        <a href="mailto:your.email@example.com">your.email@example.com</a>
-        <a href="#">Google Scholar</a>
-        <a href="#">GitHub</a>
+      <h2>Research Center for Advanced Science and Technology, The University of Tokyo</h2>
+      <div class="contact-details">
+        <p>4-6-1 Komaba, Meguro-ku, Tokyo 153-8904 JAPAN</p>
+        <p><a href="mailto:xu.jiayi@star.rcast.u-tokyo.ac.jp">xu.jiayi@star.rcast.u-tokyo.ac.jp</a></p>
+        <p><a href="tel:+817017930614">+81 70 1793 0614</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 许佳祎. Last updated May 2026.</p>
+    <p>© 2026 Jiayi Xu. Last updated May 2026.</p>
   </footer>
 
   <script src="script.js"></script>

@@ -2,7 +2,7 @@ const nav = document.querySelector(".site-nav");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeToggleText = document.querySelector(".theme-toggle__text");
 const revealItems = document.querySelectorAll(
-  ".profile, .content-section, .contact, .feature-item, .publication, .project-link"
+  ".profile, .content-section, .contact, .feature-item, .publication, .project-link, .timeline-list article, .info-grid article"
 );
 
 const updateNavShadow = () => {
@@ -42,8 +42,8 @@ const setTheme = (theme) => {
 
   const isDark = theme === "dark";
   themeToggle.setAttribute("aria-pressed", String(isDark));
-  themeToggle.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
-  themeToggleText.textContent = isDark ? "浅色" : "深色";
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  themeToggleText.textContent = isDark ? "Light" : "Dark";
 };
 
 if ("IntersectionObserver" in window) {
@@ -63,7 +63,7 @@ if ("IntersectionObserver" in window) {
 
   revealItems.forEach((item, index) => {
     item.classList.add("reveal");
-    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
+    item.style.transitionDelay = `${Math.min(index * 35, 220)}ms`;
     revealObserver.observe(item);
   });
 } else {
