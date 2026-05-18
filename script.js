@@ -2,9 +2,26 @@ const nav = document.querySelector(".site-nav");
 const themeToggle = document.querySelector(".theme-toggle");
 const themeToggleText = document.querySelector(".theme-toggle__text");
 const langButtons = document.querySelectorAll("[data-lang-button]");
+const videoFrame = document.querySelector("[data-video-frame]");
+const videoTitle = document.querySelector("[data-video-title]");
+const videoDesc = document.querySelector("[data-video-desc]");
+const videoPrev = document.querySelector("[data-video-prev]");
+const videoNext = document.querySelector("[data-video-next]");
+const videoCount = document.querySelector("[data-video-count]");
 const revealItems = document.querySelectorAll(
-  ".intro, .section-block, .news-list article, .research-grid article, .publication, .compact-list article"
+  ".intro, .section-block, .news-list article, .research-grid article, .video-carousel, .publication, .compact-list article"
 );
+
+const researchVideos = [
+  {
+    id: "Q5PBvaR5hzA",
+    titleKey: "videos.moheat.title",
+    descKey: "videos.moheat.desc",
+  },
+];
+
+let currentVideoIndex = 0;
+let currentLanguage = "en";
 
 const translations = {
   en: {
@@ -13,6 +30,7 @@ const translations = {
       "Jiayi Xu's academic homepage: haptics, virtual reality, human-computer interaction, and robotics.",
     "nav.about": "about",
     "nav.news": "news",
+    "nav.videos": "videos",
     "nav.publications": "publications",
     "nav.awards": "awards",
     "nav.service": "service",
@@ -29,6 +47,7 @@ const translations = {
     "profile.address": "RCAST, The University of Tokyo<br>4-6-1 Komaba, Meguro-ku<br>Tokyo 153-8904 JAPAN",
     "sections.news": "news",
     "sections.research": "research interests",
+    "sections.videos": "research videos",
     "sections.publications": "selected publications",
     "sections.awards": "awards",
     "sections.service": "academic service",
@@ -45,6 +64,10 @@ const translations = {
     "research.r2.desc": "Design of perceptual experiences",
     "research.r3.title": "Modulating human affective perception",
     "research.r3.desc": "Modulation of human affective perception",
+    "videos.intro": "Short research animations and demonstrations embedded from YouTube.",
+    "videos.moheat.title": "MoHeat: Non-contact high-speed thermal display",
+    "videos.moheat.desc":
+      "A research demonstration of a thermal interface that presents fast, non-contact heating and cooling feedback.",
     "tags.journal": "journal",
     "tags.conference": "conference",
     "tags.thermal": "thermal feedback",
@@ -74,6 +97,7 @@ const translations = {
     metaDescription: "许佳祎的个人学术主页：触觉、虚拟现实、人机交互与机器人学。",
     "nav.about": "关于",
     "nav.news": "动态",
+    "nav.videos": "视频",
     "nav.publications": "论文",
     "nav.awards": "获奖",
     "nav.service": "服务",
@@ -90,6 +114,7 @@ const translations = {
     "profile.address": "东京大学 先进科学技术研究中心<br>东京都目黑区驹场 4-6-1<br>邮编 153-8904 日本",
     "sections.news": "动态",
     "sections.research": "研究方向",
+    "sections.videos": "研究视频",
     "sections.publications": "代表论文",
     "sections.awards": "获奖",
     "sections.service": "学术服务",
@@ -104,6 +129,9 @@ const translations = {
     "research.r2.desc": "构建更自然、更沉浸的感知体验",
     "research.r3.title": "调节人类感性知觉",
     "research.r3.desc": "通过多模态刺激影响人类情感与身体感受",
+    "videos.intro": "嵌入 YouTube 的研究动画与演示视频。",
+    "videos.moheat.title": "MoHeat：非接触高速温度呈现装置",
+    "videos.moheat.desc": "展示快速、非接触加热与冷却反馈的温度交互界面研究演示。",
     "tags.journal": "期刊",
     "tags.conference": "会议",
     "tags.thermal": "温度反馈",
@@ -132,6 +160,7 @@ const translations = {
     metaDescription: "許佳禕の個人学術ホームページ：触覚、バーチャルリアリティ、ヒューマンコンピュータインタラクション、ロボティクス。",
     "nav.about": "概要",
     "nav.news": "ニュース",
+    "nav.videos": "動画",
     "nav.publications": "業績",
     "nav.awards": "受賞",
     "nav.service": "活動",
@@ -148,6 +177,7 @@ const translations = {
     "profile.address": "東京大学 先端科学技術研究センター<br>東京都目黒区駒場 4-6-1<br>〒153-8904 日本",
     "sections.news": "ニュース",
     "sections.research": "研究関心",
+    "sections.videos": "研究動画",
     "sections.publications": "主要業績",
     "sections.awards": "受賞",
     "sections.service": "学術活動",
@@ -162,6 +192,9 @@ const translations = {
     "research.r2.desc": "自然で没入感のある知覚体験の設計",
     "research.r3.title": "人間感性の変調",
     "research.r3.desc": "多感覚刺激による感性・身体感覚の変調",
+    "videos.intro": "YouTube から埋め込んだ研究アニメーションとデモ動画です。",
+    "videos.moheat.title": "MoHeat：非接触高速温度提示装置",
+    "videos.moheat.desc": "高速な非接触加熱・冷却フィードバックを提示する温度インタフェースの研究デモです。",
     "tags.journal": "論文誌",
     "tags.conference": "国際会議",
     "tags.thermal": "温度フィードバック",
@@ -230,6 +263,33 @@ const setTheme = (theme) => {
   }
 };
 
+const renderVideo = (index) => {
+  if (!videoFrame || researchVideos.length === 0) return;
+
+  currentVideoIndex = (index + researchVideos.length) % researchVideos.length;
+  const video = researchVideos[currentVideoIndex];
+  const dictionary = translations[currentLanguage] || translations.en;
+
+  videoFrame.src = `https://www.youtube-nocookie.com/embed/${video.id}?rel=0`;
+  videoFrame.title = dictionary[video.titleKey] || "Research video";
+
+  if (videoTitle) {
+    videoTitle.textContent = dictionary[video.titleKey] || "";
+  }
+
+  if (videoDesc) {
+    videoDesc.textContent = dictionary[video.descKey] || "";
+  }
+
+  if (videoCount) {
+    videoCount.textContent = `${currentVideoIndex + 1} / ${researchVideos.length}`;
+  }
+
+  const hasMultipleVideos = researchVideos.length > 1;
+  videoPrev?.toggleAttribute("disabled", !hasMultipleVideos);
+  videoNext?.toggleAttribute("disabled", !hasMultipleVideos);
+};
+
 const getPreferredLanguage = () => {
   const savedLanguage = storage.get("language");
   if (savedLanguage && translations[savedLanguage]) {
@@ -244,6 +304,7 @@ const getPreferredLanguage = () => {
 
 const setLanguage = (language) => {
   const dictionary = translations[language] || translations.en;
+  currentLanguage = translations[language] ? language : "en";
 
   document.documentElement.lang = language === "zh" ? "zh-CN" : language;
   document.title = dictionary.metaTitle;
@@ -269,6 +330,8 @@ const setLanguage = (language) => {
     const isActive = button.dataset.langButton === language;
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  renderVideo(currentVideoIndex);
 };
 
 if ("IntersectionObserver" in window) {
@@ -306,6 +369,20 @@ themeToggle?.addEventListener("click", () => {
   storage.set("theme", nextTheme);
   setTheme(nextTheme);
 });
+
+videoPrev?.addEventListener("click", () => {
+  renderVideo(currentVideoIndex - 1);
+});
+
+videoNext?.addEventListener("click", () => {
+  renderVideo(currentVideoIndex + 1);
+});
+
+if (researchVideos.length > 1) {
+  window.setInterval(() => {
+    renderVideo(currentVideoIndex + 1);
+  }, 12000);
+}
 
 langButtons.forEach((button) => {
   button.addEventListener("click", () => {
